@@ -1,7 +1,7 @@
 from common import VerifiedField, Base, Team, ServiceFunctionality
 import random
 
-INITIAL_HEALTH = 100
+INITIAL = 100
 
 
 class Squad(ServiceFunctionality):
@@ -44,14 +44,14 @@ class Squad(ServiceFunctionality):
 
 class Hero(ServiceFunctionality):
     """Main character class"""
-    _power = VerifiedField(value_class=int, minimum_value=1, maximum_value=100)
-    _health = VerifiedField(value_class=int, minimum_value=0, maximum_value=100)
+    _power = VerifiedField(value_class=int, minimum_value=1, maximum_value=INITIAL)
+    _health = VerifiedField(value_class=int, minimum_value=0, maximum_value=INITIAL)
     _name = VerifiedField(value_class=str, size=3)
     _is_good = VerifiedField(value_class=int, tiny_int=1)
     _team = Team(value_class=Base)
 
     def __init__(self, name, power, is_good=1):
-        self._health = INITIAL_HEALTH
+        self._health = INITIAL
         self._name = name
         self._is_good = is_good
         self._power = power
