@@ -3,6 +3,7 @@ from models import Hero, Squad
 
 
 def main():
+    """Entry point"""
     shrek = Hero(power=100, name="Shrek", is_good=1)
     cartoon = [
         Hero(power=50, name="Fiona", is_good=1),

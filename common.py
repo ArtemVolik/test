@@ -23,7 +23,7 @@ class ServiceFunctionality(Base):
 
 
 class VerifiedField:
-    """Data descriptor for Hero class attributes"""
+    """Data descriptor for Hero, Squad classes attributes"""
     allowed_letters = ascii_letters + " "
 
     def __init__(
@@ -70,6 +70,7 @@ class VerifiedField:
 
 
 class Team:
+    """Data descriptor for Hero, Squad classes attributes"""
     def __init__(self, value_class):
         self.__value_class = value_class
 
